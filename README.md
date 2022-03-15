@@ -48,7 +48,7 @@ Example:
 }
 ```
 
-    ### Route: http://127.0.0.1:5000/spendpoints/<int:points>
+### Route: http://127.0.0.1:5000/spendpoints/<int:points>
 
 This route is for spending points using the rules above and returns a list of points sent. Users need to send a PUT request to the above route changing <int:points> to the deserved amount of points to be spent. If there aren't enough points, the api will return a dictionary of the accounts changed and how many points were taken. Points are only spent if there is enough in the accounts. 
 
