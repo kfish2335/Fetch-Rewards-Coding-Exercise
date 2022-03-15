@@ -26,7 +26,7 @@ class payermanger:
     
     def updateTransaction(self, payer, amount, timestamp):
         self.transaction.append({'payer': payer, 'amount': self.__updatePayers(payer, amount), 'timestamp': timestamp})
-        
+        return None
     
     def printPlayer(self):
         return self.payers 
@@ -65,7 +65,7 @@ class payermanger:
             if len(visited) == limit:
                 break
         self.wait = False
-        return "not enough points", 409
+        return "not enough points"
 
 def main():
     test = payermanger()
@@ -78,7 +78,8 @@ def main():
     ]
     for i in test1:
         test.updateTransaction( i["payer"], i["points"], i["timestamp"])
-        
+    
+    print(test.printPlayer())
     print(test.spendPoints(5000))
     print(test.printPlayer())
     print(test.spendPoints(5000))
