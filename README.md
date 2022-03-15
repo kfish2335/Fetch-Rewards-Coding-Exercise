@@ -23,13 +23,13 @@ To start the server:
 
 Open the command line and move to the Fetch Reward dir.
 
-⋅⋅* Start the virtual environment by entering & env/Scripts/Activate.ps1 into the command line
-⋅⋅* Start the program apiManger.py (the port number of your server may be different from the examples, please change the port number before using routes. )
-⋅⋅* To stop the server, use the command CTRL+C to shut down the server.
+    Start the virtual environment by entering & env/Scripts/Activate.ps1 into the command line
+    Start the program apiManger.py (the port number of your server may be different from the examples, please change the port number before using routes. )
+    To stop the server, use the command CTRL+C to shut down the server.
 
 Three routes are provide for use:
 
-    ### Route: http://127.0.0.1:5000/transaction
+### Route: http://127.0.0.1:5000/transaction
 
 This route is for adding payer transactions. Users need to send a POST request in json format with the following argument: payer (string), amount(int), and timestamp(string) in a dictionary. Each transaction is saved by the program. If all these variables are not proved, the api will return an error. If an amount is provided that would set the account below zero, then that amount is set to zero. 
 
@@ -51,7 +51,7 @@ Example:
 ```
 http://127.0.0.1:5000/spendpoints/5000
 ```
-    ### Route: http://127.0.0.1:5000/balance
+### Route: http://127.0.0.1:5000/balance
 
 This route is for getting the balances of all accounts currently recorded by the api. Users need to send a Get request to the above route. It will return a dictionary of account names and current balances in Json format. 
 
